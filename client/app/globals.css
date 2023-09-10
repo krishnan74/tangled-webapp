@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+body{
+  background-color: #F0F9FF;
+
+}
+
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;800;900&display=swap);
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Add this to your CSS or a separate CSS file */
+.bg-animation {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(90deg, #4F86E7 0%, #FF6347 100%);
+  animation: backgroundAnimation 10s linear infinite;
+  opacity: 0.3;
+}
+
+@keyframes backgroundAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 2s ease-in-out infinite;
+}
+
