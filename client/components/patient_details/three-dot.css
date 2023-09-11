@@ -1,0 +1,13 @@
+.dots{  
+    display: flex; 
+ 
+ } 
+ 
+ .three_dot1{
+     height: 4px;
+     width: 4px;
+     background-color: black;
+     border-radius: 5px;
+     margin-left: 2px;
+ }
+ 

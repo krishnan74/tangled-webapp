@@ -1,0 +1,82 @@
+.uv_card{
+    background-color: white;
+    border-radius: 29px;
+    width: 220px;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+}
+
+.text_div{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.levels_uv{
+    display: flex;
+    justify-content: flex-start;
+    color: #c9c9c9;
+}
+
+.levels_uv>div {
+    margin-left: 20px;
+}
+
+.normal_div_uv {
+    position: relative;
+}
+
+.normal_div_uv::before {
+    content: ' ';
+  position: absolute;
+  left: 0px;
+  top: 16px;
+  width: 26px;
+  height: 7px;
+  border-radius: 9px;
+  background: #DCDCDC;
+}
+.normal_div_uv::after {
+    content: ' ';
+  position: absolute;
+  left: 0px;
+  top: 16px;
+  width: 12px;
+  height: 7px;
+  border-radius: 9px 0px 0px 9px;
+  background:#5C9CE5;
+}
+
+
+
+.good_div_uv {
+    position: relative;
+}
+
+.good_div_uv::before {
+    content: ' ';
+  position: absolute;
+  left: 0px;
+  top: 16px;
+  width: 26px;
+  height: 7px;
+  border-radius: 9px;
+  background: #5C9CE5;
+}
+.bad_div_uv {
+    position: relative;
+    
+}
+
+.bad_div_uv::before {
+    content: ' ';
+  position: absolute;
+  left: 0px;
+  top: 16px;
+  width: 26px;
+  height: 7px;
+  border-radius: 9px;
+  background:#DCDCDC;
+}
+

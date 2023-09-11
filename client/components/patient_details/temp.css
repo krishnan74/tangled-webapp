@@ -1,0 +1,66 @@
+.hum_card{
+    background-color: white;
+    border-radius: 29px;
+    width: 220px;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+}
+
+.text_div{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+#icon_holder{
+    height: 20px;
+    width: 21px;
+    background: #5C9CE5;
+    border-radius: 4px;
+}
+
+.levels{
+    display: flex;
+    justify-content: flex-start;
+    color: #c9c9c9;
+}
+
+.levels>div {
+    margin-left: 29px;
+}
+
+.normal_div_temp {
+    position: relative;
+    color: #c9c9c9;
+    display: flex;
+}
+
+
+
+.normal_div_temp::before {
+    content: ' ';
+  position: absolute;
+  left: 0px;
+  top: 16px;
+  width: 160px;
+  height: 7px;
+  border-radius: 9px;
+  background: #5C9CE5;
+}
+.normal_div_temp::after {
+    content: ' ';
+  position: absolute;
+  left: 80px;
+  top: 16px;
+  width: 85px;
+  height: 7px;
+  border-radius: 0 9px 9px 0;
+  background: #DCDCDC;
+}
+
+
+
+
+
+

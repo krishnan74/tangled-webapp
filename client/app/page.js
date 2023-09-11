@@ -1,9 +1,10 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
-import ProfileCard from "@/components/ProfileCard";
 import Card from "@/components/CardGreen";
 import "../app/globals.css";
-import CardRGB from "@/components/CardRGB";
+import CardGreen from "@/components/CardGreen";
+import AirpodsCard from "@/components/AirpodsCard";
+import ProfileCard from "@/components/ProfileCard";
 
 
 const Page = () => {
@@ -75,83 +76,105 @@ const Page = () => {
   return (
     <>
       <div className="relative" onMouseMove={handleMouseMove}>
-      
         <div
           className="circle absolute top-[20px] left-[80px]  w-16 h-16 rounded-full animate-float bg-[#4F86E7] opacity-50 cursor-pointer z-0"
-          style={{ animationDelay: getRandomDelay() }} onMouseEnter={moveCircle}
+          style={{ animationDelay: getRandomDelay() }}
+          onMouseEnter={moveCircle}
         />
         <div
           className="circle absolute top-[80px]  right-[160px] w-12 h-12 rounded-full animate-float bg-[#4F86E7] opacity-50 cursor-pointer z-0"
-          style={{ animationDelay: getRandomDelay() }} onMouseEnter={moveCircle}
+          style={{ animationDelay: getRandomDelay() }}
+          onMouseEnter={moveCircle}
         />
         <div
           className="circle absolute top-[30px] left-[300px]  w-20 h-20 rounded-full animate-float bg-[#4F86E7] opacity-60 cursor-pointer z-0"
-          style={{ animationDelay: getRandomDelay() }} onMouseEnter={moveCircle}
+          style={{ animationDelay: getRandomDelay() }}
+          onMouseEnter={moveCircle}
         />
-    
+
         <div
           className="circle absolute top-[140px]  right-[40px] w-10 h-10 rounded-full animate-float bg-[#4779d1] opacity-50 cursor-pointer z-0"
-          style={{ animationDelay: getRandomDelay() }} onMouseEnter={moveCircle}
+          style={{ animationDelay: getRandomDelay() }}
+          onMouseEnter={moveCircle}
         />
         <div
           className="circle absolute top-[80px] left-[260px]  w-14 h-14 rounded-full animate-float bg-[#8fb5f6] opacity-50 cursor-pointer z-0"
-          style={{ animationDelay: getRandomDelay() }} onMouseEnter={moveCircle}
+          style={{ animationDelay: getRandomDelay() }}
+          onMouseEnter={moveCircle}
         />
 
         <div
           className="circle absolute top-[120px] right-[180px] w-16 h-16 rounded-full animate-float bg-[#4F86E7] opacity-50 cursor-pointer z-0"
-          style={{ animationDelay: getRandomDelay() }} onMouseEnter={moveCircle}
+          style={{ animationDelay: getRandomDelay() }}
+          onMouseEnter={moveCircle}
         />
 
         <div
           className="circle absolute top-[180px] left-[160px] w-16 h-16 rounded-full animate-float bg-[#4F86E7] opacity-50 cursor-pointer z-0"
-          style={{ animationDelay: getRandomDelay() }} onMouseEnter={moveCircle}
+          style={{ animationDelay: getRandomDelay() }}
+          onMouseEnter={moveCircle}
         />
 
         <div
           className="circle absolute top-[230px]  right-[360px] w-16 h-16 rounded-full animate-float bg-[#4F86E7] opacity-50 cursor-pointer z-0"
-          style={{ animationDelay: getRandomDelay() }} onMouseEnter={moveCircle}
+          style={{ animationDelay: getRandomDelay() }}
+          onMouseEnter={moveCircle}
         />
 
         <div
           className="circle absolute top-[140px] left-[640px] w-12 h-12 rounded-full animate-float bg-[#c4daff] opacity-60 cursor-pointer z-0"
-          style={{ animationDelay: getRandomDelay() }} onMouseEnter={moveCircle}
+          style={{ animationDelay: getRandomDelay() }}
+          onMouseEnter={moveCircle}
         />
         <div
           className="circle absolute top-[320px]  right-[160px] w-18 h-18 rounded-full animate-float bg-[#8299c1] opacity-50 cursor-pointer z-0"
-          style={{ animationDelay: getRandomDelay() }} onMouseEnter={moveCircle}
+          style={{ animationDelay: getRandomDelay() }}
+          onMouseEnter={moveCircle}
         />
         <div
           className="circle absolute top-[210px] left-[520px]  w-14 h-14 rounded-full animate-float bg-[#6c93d6] opacity-60 cursor-pointer z-0"
-          style={{ animationDelay: getRandomDelay() }} onMouseEnter={moveCircle}
+          style={{ animationDelay: getRandomDelay() }}
+          onMouseEnter={moveCircle}
         />
 
         <div
           className="circle absolute top-[20px]  right-[190px] w-16 h-16 rounded-full animate-float bg-[#4F86E7] opacity-50 cursor-pointer z-0"
-          style={{ animationDelay: getRandomDelay() }} onMouseEnter={moveCircle}
+          style={{ animationDelay: getRandomDelay() }}
+          onMouseEnter={moveCircle}
         />
         <div
-          className="circle absolute top-[80px] left-[360px] w-12 h-12 rounded-full animate-float bg-[#4F86E7] opacity-50 cursor-pointer z-0"
-          style={{ animationDelay: getRandomDelay() }} onMouseEnter={moveCircle}
+          className="circle absolute top-[180px] left-[360px] w-12 h-12 rounded-full animate-float bg-[#4F86E7] opacity-50 cursor-pointer z-0"
+          style={{ animationDelay: getRandomDelay() }}
+          onMouseEnter={moveCircle}
         />
         <div
           className="circle absolute top-[0px]  right-[300px] w-20 h-20 rounded-full animate-float bg-[#4F86E7] opacity-60 cursor-pointer z-0"
-          style={{ animationDelay: getRandomDelay() }} onMouseEnter={moveCircle}
+          style={{ animationDelay: getRandomDelay() }}
+          onMouseEnter={moveCircle}
         />
-       
+
         <div
           className="circle absolute top-[40px] left-[240px]  w-10 h-10 rounded-full animate-float bg-[#4779d1] opacity-50 cursor-pointer z-0"
-          style={{ animationDelay: getRandomDelay() }} onMouseEnter={moveCircle}
+          style={{ animationDelay: getRandomDelay() }}
+          onMouseEnter={moveCircle}
         />
-        <div  
-          className="circle absolute top-[110px]  right-[160px] w-14 h-14 rounded-full animate-float bg-[#8fb5f6] opacity-50 cursor-pointer z-0"
-          style={{ animationDelay: getRandomDelay() }} onMouseEnter={moveCircle}
+        <div
+          className="circle absolute top-[200px]  right-[160px] w-14 h-14 rounded-full animate-float bg-[#8fb5f6] opacity-50 cursor-pointer z-0"
+          style={{ animationDelay: getRandomDelay() }}
+          onMouseEnter={moveCircle}
         />
-        
 
-        <h1 className="text-9xl text-center text-[#4F86E7] font-bold mt-32 tracking-widest">
-          TANGLED
-        </h1>
+        <p className="text-7xl text-center text-[#212121] font-semibold mt-32 tracking-wide">
+          Decentralized
+        </p>
+
+        <p className="text-7xl text-center  text-[#4F86E7] font-semibold tracking-wide">
+          Health Care Platform
+        </p>
+
+        <p className="text-7xl text-center  text-[#212121] font-semibold tracking-wide">
+          AI - Assisted
+        </p>
         <section className="py-16">
           <div className="container mx-auto text-center">
             <p className="text-lg text-gray-600">
@@ -163,11 +186,21 @@ const Page = () => {
           </div>
         </section>
       </div>
-      <div className="flex justify-around">
-        <CardRGB />
-        <CardRGB />
-        <CardRGB />
+      <div className="flex justify-around mb-10">
+        <CardGreen
+          feature="Predictive Analysis (AI)"
+          description="Tangled uses large dataset of patient's history and can predict diagnosis"
+        />
+        <CardGreen
+          feature="Decentralized EHR"
+          description="Tangled stores the information about patients in IPFS"
+        />
+        <CardGreen
+          feature="Unity Phobia"
+          description="Tangled helps people with phobia to overcome them using VR training"
+        />
       </div>
+
     </>
   );
 };

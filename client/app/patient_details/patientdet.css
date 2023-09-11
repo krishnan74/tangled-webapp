@@ -1,0 +1,161 @@
+
+
+html{
+  height: 100%;
+  width: 100%;
+}
+
+
+.main_content{
+  display: flex;
+  height: 94%;
+  width: 1080px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 38px;
+  
+}
+
+.left_section{
+  display: flex;
+  flex-direction: column;
+  background-color: #5C9CE5;
+  width: 26%;
+  border-radius: 39px 0px 0px 39px; 
+}
+
+
+
+.right_section{
+  background-color: #E4F1FF;
+  width: 74%;  
+  border-radius: 39px;
+  
+}
+
+.right_section::before {
+  content: ' ';
+  position: absolute;
+  left: 370px;
+  width: 80px;
+  z-index: -1;
+  height: 609px;
+  background: #5C9CE5;
+}
+
+
+.opt_bar{
+  display: flex;
+  justify-content: space-around; 
+  margin-top: 30px;
+  align-items: center;
+}
+
+.city_div{
+  margin-top: 50px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.left_text{
+  color: rgba(255, 255, 255, 0.845);
+  font-size: medium;
+}
+
+.left_text_time{
+  color: #ffffffd7;
+  font-size: small;
+}
+
+.newyork{
+  display: flex;
+  align-items: center;
+}
+
+.temp_div{
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.temp_main{
+  display: flex;
+  flex-direction: column;
+}
+
+.temp-text{
+  position: relative;
+  top: -4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 74px;
+}
+
+#building{
+  height: 330px;
+  width: 400px;
+  position: relative;
+  top: -18px;
+  border-radius: 0 0 0 29px;
+  left: -2px;
+  z-index: 1;
+}
+
+.right_section::after{
+  content: ' ';
+  position: absolute;
+  left: 370px;
+  top: 600px;
+  width: 80px;
+  z-index: -1;
+  height: 29px;
+  background: #BDBDBD;
+}
+
+/*Right Section*/
+
+.right_section{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.user_detail{
+  display: flex;
+  justify-content: space-between;
+}
+
+.user_detail_pic{
+  display: flex;
+  align-items: center;
+}
+
+#user_pic{
+  height: 40px;
+  width: 40px;
+  object-fit:cover;
+  border-radius: 12px;
+}
+
+/*Chart*/
+.chart{
+  height: 200px;
+  width: 725px;
+  background-color: white;
+  border-radius: 24px;
+  margin-left: 35px;
+  margin-top: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+}
+
+.weather_props_div{
+  
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-row-gap: 30px;
+}

@@ -1,0 +1,22 @@
+.dots_ct{  
+   display: flex; 
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50px;
+    margin-left: 30px;
+
+} 
+
+.dot1{
+    height: 5px;
+    width:15px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+.dot2{
+    height: 6px;
+    width:6px;
+    background-color: #9DC3EF;
+    border-radius: 50%;
+}

@@ -1,0 +1,190 @@
+.chart_div{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.chart_header_div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.chart_options{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.chart_options_ind{
+    display: flex;
+    margin-right: 19px;
+    background-color: #eaeaea;
+    border-radius: 12px;
+    font-size: 10px;
+    align-items: center;
+    padding: 0 3px 0 10px ;
+}
+
+
+.arrow{
+    height: 15px;
+    width: 15px;
+    margin-bottom: 3px;
+    margin-left: 10px;
+    margin-right: 2px;
+}
+
+
+
+
+.timeline-chart {
+    display: flex;
+    margin-left:-8px;
+    margin-top: 19px;
+    width: 660px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+
+
+
+  
+  .timeline-chart .data-point {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  .timeline-chart .data-point::before{
+    content: ' ';
+    width: 50px;
+    height: 1px;
+    position: relative;
+    top: 26px;
+    left: 42px;
+    background-color: black;
+  }
+
+  .timeline-chart .data-point::after{
+    content: ' ';
+    width: 80px;
+    left: 41px;
+    top: -20px;
+    height: 20px;
+    position: relative;
+    
+    background-color: black;
+  }
+
+  .timeline-chart .data-point:nth-child(1)::after {
+    
+    background: linear-gradient(to right, #ff000094, #ff990094);
+      
+      }
+  
+  .timeline-chart .data-point:nth-child(2)::after {
+    background: linear-gradient(to right, #ff990094, #ffff0094);  }
+  
+  .timeline-chart .data-point:nth-child(3)::after {
+    background: linear-gradient(to right, #ffff0094, #ccff0094);
+}
+  
+  /* Add more styles for other positions as needed */
+  .timeline-chart .data-point:nth-child(4)::after {
+    background: linear-gradient(to right, #ccff0094, #33ff0094);
+}
+  
+  .timeline-chart .data-point:nth-child(5)::after {
+    background: linear-gradient(to right, #33ff0094, #ff330094);
+}
+  
+  .timeline-chart .data-point:nth-child(6)::after {
+    background: linear-gradient(to right, #ff330094, #ffcc0094);
+}
+
+  .timeline-chart .data-point:nth-child(7)::after {
+    background: linear-gradient(to right, #ffcc0094, #99ff0094);
+  }
+  
+  
+  /* Add more styles for other positions as needed */
+    
+
+#last{
+    margin-left: 25px;
+}  
+
+#last::before{
+    content: ' ';
+    width: 0px;
+    height: 1px;
+}
+
+#last::after{
+    content: ' ';
+    width: 0px;
+    left: 39px;
+    top: -30px;
+    height: 20px;
+    position: relative;
+    
+    background-color: black;
+}
+  
+  .timeline-chart .data-point .time {
+    font-size: 10px;
+    margin-bottom: 0px;
+  }
+  
+  .timeline-chart .data-point .temperature {
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
+  .timeline-chart .data-point .logo img {
+    width: 17px;
+    height: 17px;
+  }
+
+   .vertical-line {
+    height: 39px;
+    width: 2px;
+    background-color: black;
+  }
+
+.legend{
+    display: flex;
+    text-align: right;
+    padding-right: 7px;
+    justify-content: space-evenly;
+    height: 140px;
+    margin-top: 10px;
+    margin-left: 0px;
+    border-radius: 20px;
+    width: 60px;
+}
+
+.color-text{
+    display: flex;
+    text-align: right;
+    padding-right: 7px;
+    justify-content: space-evenly;
+    height: 140px;
+    margin-left: 7px;
+    width: 60px;
+    flex-direction: column-reverse;
+}
+
+.color_bar{
+    height: 120px;
+    width: 5px;
+    position: relative;
+    top: 10px;
+    left: 9px;
+    background: linear-gradient(to bottom, #FF000094, #FF330094, #FF660094, #FF990094, #FFCC0094, #FFFF0094, #CCFF0094, #99FF0094, #66FF0094, #33FF0094, #00FF00);
+}
+
+.graph_div{
+    display: flex;
+}

@@ -1,0 +1,91 @@
+.hum_card{
+    background-color: white;
+    border-radius: 29px;
+    width: 220px;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+}
+
+.text_div{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+#icon_holder{
+    height: 20px;
+    width: 21px;
+    background: #5C9CE5;
+    border-radius: 4px;
+}
+
+.levels_{
+    display: flex;
+    justify-content: flex-start;
+    color: #c9c9c9;
+}
+
+.levels>div {
+    margin-left: 29px;
+}
+
+.bad_div {
+    position: relative;
+}
+
+.bad_div::before {
+    content: ' ';
+  position: absolute;
+  left: 0px;
+  top: 16px;
+  width: 40px;
+  height: 7px;
+  border-radius: 9px;
+  background: #5C9CE5;
+}
+.bad_div::after {
+    content: ' ';
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  width: 24px;
+  height: 7px;
+  border-radius: 0 9px 9px 0;
+  background: #DCDCDC;
+}
+
+
+
+.good_div {
+    position: relative;
+}
+
+.good_div::before {
+    content: ' ';
+  position: absolute;
+  left: 0px;
+  top: 16px;
+  width: 40px;
+  height: 7px;
+  border-radius: 9px;
+  background: #5C9CE5;
+}
+.normal_div {
+    position: relative;
+    
+}
+
+.normal_div::before {
+    content: ' ';
+  position: absolute;
+  left: 8px;
+  top: 16px;
+  width: 40px;
+  height: 7px;
+  border-radius: 9px;
+  background: #5C9CE5;
+}
+

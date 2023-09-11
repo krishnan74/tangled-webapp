@@ -1,0 +1,14 @@
+.vertical_line::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  width: 3px;
+  height: 35px;
+  background-color: white;
+}
+
+.vertical_line {
+  position: relative;
+}
+
+

@@ -1,0 +1,30 @@
+.toggle_btn {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background-color: #FFFFFF;
+  border-radius: 100px;
+  z-index: 2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+}
+
+.toggle_div{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+}
+
+.toggle_div::before {
+  content: ' ';
+  height: 10px;
+  width: 25px;
+  background-color: #DCDCDC;
+  position: absolute;
+  left: 22px;
+  top: 5px;
+  border-radius: 12px;
+  z-index: 1;
+
+}

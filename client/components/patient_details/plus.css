@@ -1,0 +1,25 @@
+.plus_button{
+    width: 25px;
+    height: 25px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    margin-right: 0px;
+    margin-left: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+    
+}
+
+img{
+    height: 16px;
+    width: 16px; 
+    margin-left: 2.5px;
+    margin-top: 2.5px;
+}
+
+.plus_pic{
+    position: relative;
+    top: 4px;
+    left: 2px;
+    
+}
