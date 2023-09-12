@@ -10,6 +10,25 @@ body{
 }
 
 
+
+.body::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+.body::-webkit-scrollbar-thumb {
+  background-color: #4a90e2; /* Color of the scrollbar thumb */
+  border-radius: 6px; /* Rounded corners for the thumb */
+}
+
+.body::-webkit-scrollbar-thumb:hover {
+  background-color: #3572b0; /* Color of the scrollbar thumb on hover */
+}
+
+.body::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Color of the scrollbar track */
+  border-radius: 6px; /* Rounded corners for the track */
+}
+
 /* Add this to your CSS or a separate CSS file */
 .bg-animation {
   position: absolute;
@@ -39,7 +58,34 @@ body{
   }
 }
 
+@keyframes rotate4 {
+ 100% {
+  transform: rotate(360deg);
+ }
+}
+
+@keyframes dash4 {
+ 0% {
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+ }
+
+ 50% {
+  stroke-dasharray: 90, 200;
+  stroke-dashoffset: -35px;
+ }
+
+ 100% {
+  stroke-dashoffset: -125px;
+ }
+}
+
+
 .animate-float {
   animation: float 2s ease-in-out infinite;
 }
 
+.arch_div:hover{
+  transform: translateY(-30px);
+  transition: .6s;
+}

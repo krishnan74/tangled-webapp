@@ -5,7 +5,9 @@ import "../app/globals.css";
 import CardGreen from "@/components/CardGreen";
 import AirpodsCard from "@/components/AirpodsCard";
 import ProfileCard from "@/components/ProfileCard";
-
+import BubblesHome from "@/components/BubblesHome";
+import { PrimaryFeatures } from "@/components/PrimaryFeatures";
+import Image from "next/image";
 
 const Page = () => {
   const [message, setMessage] = useState("Nothing");
@@ -76,131 +78,100 @@ const Page = () => {
   return (
     <>
       <div className="relative" onMouseMove={handleMouseMove}>
-        <div
-          className="circle absolute top-[20px] left-[80px]  w-16 h-16 rounded-full animate-float bg-[#4F86E7] opacity-50 cursor-pointer z-0"
-          style={{ animationDelay: getRandomDelay() }}
-          onMouseEnter={moveCircle}
-        />
-        <div
-          className="circle absolute top-[80px]  right-[160px] w-12 h-12 rounded-full animate-float bg-[#4F86E7] opacity-50 cursor-pointer z-0"
-          style={{ animationDelay: getRandomDelay() }}
-          onMouseEnter={moveCircle}
-        />
-        <div
-          className="circle absolute top-[30px] left-[300px]  w-20 h-20 rounded-full animate-float bg-[#4F86E7] opacity-60 cursor-pointer z-0"
-          style={{ animationDelay: getRandomDelay() }}
-          onMouseEnter={moveCircle}
-        />
+        <BubblesHome />
+        <div className="z-10">
+          <p className="text-7xl text-center text-[#212121] font-semibold mt-32 tracking-wide">
+            Decentralized
+          </p>
 
-        <div
-          className="circle absolute top-[140px]  right-[40px] w-10 h-10 rounded-full animate-float bg-[#4779d1] opacity-50 cursor-pointer z-0"
-          style={{ animationDelay: getRandomDelay() }}
-          onMouseEnter={moveCircle}
-        />
-        <div
-          className="circle absolute top-[80px] left-[260px]  w-14 h-14 rounded-full animate-float bg-[#8fb5f6] opacity-50 cursor-pointer z-0"
-          style={{ animationDelay: getRandomDelay() }}
-          onMouseEnter={moveCircle}
-        />
+          <p className="text-7xl text-center  text-[#4F86E7] font-semibold tracking-wide">
+            Health Care Platform
+          </p>
 
-        <div
-          className="circle absolute top-[120px] right-[180px] w-16 h-16 rounded-full animate-float bg-[#4F86E7] opacity-50 cursor-pointer z-0"
-          style={{ animationDelay: getRandomDelay() }}
-          onMouseEnter={moveCircle}
-        />
+          <p className="text-7xl text-center  text-[#212121] font-semibold tracking-wide">
+            AI - Assisted
+          </p>
+          <p className="text-2xl text-center text-[#4d4d4d] font-semibold tracking-wide">
+            Made for{" "}
+            <span
+              className="text-2xl text-center font-semibold tracking-wide"
+              style={{
+                backgroundImage: "linear-gradient(to right, #ff6347, #32cd32)",
+                WebkitBackgroundClip: "text",
+                color: "transparent",
+              }}
+            >
+              Hack'o Holics
+            </span>
+          </p>
+          <section className="py-16">
+            <div className="container mx-auto text-center">
+              <p className="text-lg text-gray-600">
+                Tangled is a unified digital platform where patient details are
+                stored in a secure manner using decentralization
+              </p>
+              <button className="bg-[#4F86E7] text-white font-semibold py-2 px-4 mt-8 rounded-full">
+                Get Started
+              </button>
+            </div>
+          </section>
+        </div>
 
-        <div
-          className="circle absolute top-[180px] left-[160px] w-16 h-16 rounded-full animate-float bg-[#4F86E7] opacity-50 cursor-pointer z-0"
-          style={{ animationDelay: getRandomDelay() }}
-          onMouseEnter={moveCircle}
-        />
+        <div className="flex justify-around mb-32">
+          <CardGreen
+            feature="Decentralized EHR"
+            description="Tangled stores the information about patients in IPFS"
+            techstackimage="/solidity.png"
+            techstack="Solidity"
+            link = "/web3"
+          />
+          <CardGreen
+            feature="Predictive Analysis (AI)"
+            description="Tangled uses large dataset of patient's history and can predict diagnosis"
+            techstackimage="/python.png"
+            techstack="Python"
+            link = "/diagnose"
+          />
+          <CardGreen
+            feature="Anti Phobia (VR)"
+            description="Tangled helps people with phobia to overcome them using VR environment"
+            techstackimage="/unity.png"
+            techstack="Unity"
+            link = "#"
+          />
+        </div>
 
-        <div
-          className="circle absolute top-[230px]  right-[360px] w-16 h-16 rounded-full animate-float bg-[#4F86E7] opacity-50 cursor-pointer z-0"
-          style={{ animationDelay: getRandomDelay() }}
-          onMouseEnter={moveCircle}
-        />
+        <PrimaryFeatures/>
 
-        <div
-          className="circle absolute top-[140px] left-[640px] w-12 h-12 rounded-full animate-float bg-[#c4daff] opacity-60 cursor-pointer z-0"
-          style={{ animationDelay: getRandomDelay() }}
-          onMouseEnter={moveCircle}
-        />
-        <div
-          className="circle absolute top-[320px]  right-[160px] w-18 h-18 rounded-full animate-float bg-[#8299c1] opacity-50 cursor-pointer z-0"
-          style={{ animationDelay: getRandomDelay() }}
-          onMouseEnter={moveCircle}
-        />
-        <div
-          className="circle absolute top-[210px] left-[520px]  w-14 h-14 rounded-full animate-float bg-[#6c93d6] opacity-60 cursor-pointer z-0"
-          style={{ animationDelay: getRandomDelay() }}
-          onMouseEnter={moveCircle}
-        />
+        <div className="flex mb-10 mt-20 justify-around">
+          <div className="flex flex-col w-1/2">
+            <div>
+              <p className="text-7xl text-center text-[#212121] font-semibold tracking-wide">
+                How it works?
+              </p>
+            </div>
 
-        <div
-          className="circle absolute top-[20px]  right-[190px] w-16 h-16 rounded-full animate-float bg-[#4F86E7] opacity-50 cursor-pointer z-0"
-          style={{ animationDelay: getRandomDelay() }}
-          onMouseEnter={moveCircle}
-        />
-        <div
-          className="circle absolute top-[180px] left-[360px] w-12 h-12 rounded-full animate-float bg-[#4F86E7] opacity-50 cursor-pointer z-0"
-          style={{ animationDelay: getRandomDelay() }}
-          onMouseEnter={moveCircle}
-        />
-        <div
-          className="circle absolute top-[0px]  right-[300px] w-20 h-20 rounded-full animate-float bg-[#4F86E7] opacity-60 cursor-pointer z-0"
-          style={{ animationDelay: getRandomDelay() }}
-          onMouseEnter={moveCircle}
-        />
-
-        <div
-          className="circle absolute top-[40px] left-[240px]  w-10 h-10 rounded-full animate-float bg-[#4779d1] opacity-50 cursor-pointer z-0"
-          style={{ animationDelay: getRandomDelay() }}
-          onMouseEnter={moveCircle}
-        />
-        <div
-          className="circle absolute top-[200px]  right-[160px] w-14 h-14 rounded-full animate-float bg-[#8fb5f6] opacity-50 cursor-pointer z-0"
-          style={{ animationDelay: getRandomDelay() }}
-          onMouseEnter={moveCircle}
-        />
-
-        <p className="text-7xl text-center text-[#212121] font-semibold mt-32 tracking-wide">
-          Decentralized
-        </p>
-
-        <p className="text-7xl text-center  text-[#4F86E7] font-semibold tracking-wide">
-          Health Care Platform
-        </p>
-
-        <p className="text-7xl text-center  text-[#212121] font-semibold tracking-wide">
-          AI - Assisted
-        </p>
-        <section className="py-16">
-          <div className="container mx-auto text-center">
-            <p className="text-lg text-gray-600">
-              Tangled is a unified digital platform
-            </p>
-            <button className="bg-[#4F86E7] text-white font-semibold py-2 px-4 mt-8 rounded-full">
-              Get Started
-            </button>
+            <div className="mt-10">
+              <p className="text-left text-1xl px-[60px] text-gray-600">
+                Tangled's architecture is designed to provide scalability and
+                speed while maintaining security and decentralization. It is
+                resilient to attacks, as each transaction is validated by
+                multiple nodes in the network, reducing the risk of a single
+                point of failure.
+              </p>
+            </div>
           </div>
-        </section>
-      </div>
-      <div className="flex justify-around mb-10">
-        <CardGreen
-          feature="Predictive Analysis (AI)"
-          description="Tangled uses large dataset of patient's history and can predict diagnosis"
-        />
-        <CardGreen
-          feature="Decentralized EHR"
-          description="Tangled stores the information about patients in IPFS"
-        />
-        <CardGreen
-          feature="Unity Phobia"
-          description="Tangled helps people with phobia to overcome them using VR training"
-        />
-      </div>
 
+          <div className="mr-[80px] w-full bg-white rounded-lg py-4 flex justify-center arch_div shadow-lg">
+            <Image
+              src={"/sys_arch.png"}
+              height={"900"}
+              width={"900"}
+              className="border-2  p-5 rounded-lg"
+            />
+          </div>
+        </div>
+      </div>
     </>
   );
 };

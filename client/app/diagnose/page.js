@@ -1,8 +1,41 @@
-"use client"
+"use client";
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
+import Bubbles from "@/components/Bubbles";
+import Loader from "@/components/Loader";
 
 const DiagnosePage = () => {
-  const [result, setResult] = useState("Nothing");
+  const [path, setPath] = useState("Loading...");
+  const [loaderdiv, toggleLoaderDiv] = useState(false); 
+  const [selectedFoodType, setSelectedFoodType] = useState("");
+  const [buttonStyle, setButtonStyle] = useState({
+    left: 0,
+    top: 0,
+  });
+
+  const handleMouseMove = (e) => {
+    const x = e.clientX;
+    const y = e.clientY;
+
+    // Calculate the new position for the button
+    const newX = x - 20; // Adjust this value to control the offset
+    const newY = y - 10; // Adjust this value to control the offset
+
+    // Update the button's style
+    setButtonStyle({
+      left: `${newX}px`,
+      top: `${newY}px`,
+    });
+  };
+
+  function myFunction(e) {
+    let x = e.clientX;
+    let y = e.clientY;
+  }
+
+  // Define a function to handle the change in the dropdown selection
+
+  useEffect(() => {}, [path]);
 
   const [formData, setFormData] = useState({
     foodType: "",
@@ -21,8 +54,29 @@ const DiagnosePage = () => {
     setFormData({ ...formData, [name]: value });
   };
 
+  const download_report = () => {
+    if (path) {
+      // Create an anchor element
+      const link = document.createElement("a");
+      link.href = path;
+      link.download = "nutrition_report.pdf"; // You can specify the desired filename here
+      link.target = "_blank"; // Open the link in a new tab
+      document.body.appendChild(link);
+
+      // Trigger a click event on the anchor element
+      link.click();
+
+      // Remove the anchor element from the DOM
+      document.body.removeChild(link);
+    } else {
+      // Handle the case where 'path' is empty or report is not available
+      alert("Report is not available for download.");
+    }
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    toggleLoaderDiv(true);
 
     // Prepare the data to be sent to the server
     const requestData = {
@@ -43,14 +97,14 @@ const DiagnosePage = () => {
       })
       .then((data) => {
         // Handle the response from the server if needed
-        setResult(data.result)
+        const actualpath = data.path;
+        setPath(actualpath);
         console.log("Server response:", data);
       })
       .catch((error) => {
         console.error("Error sending data to server:", error);
       });
   };
-
 
   return (
     <div>
@@ -64,19 +118,24 @@ const DiagnosePage = () => {
               >
                 Type of Food
               </label>
-              <input
-                type="text"
+              <select
                 id="foodType"
                 name="foodType"
                 value={formData.foodType}
                 onChange={handleChange}
                 className="mt-1 p-2 border rounded-md w-full"
                 required
-              />
+              >
+                <option value="">Select a food type</option>
+                <option value="1">Grains</option>
+                <option value="2">Nuts</option>
+                <option value="3">Vegetables</option>
+                <option value="4">Fruits</option>
+              </select>
             </div>
           </div>
           <div className="flex ">
-            <div className="mb-4">
+            {/* <div className="mb-4">
               <label
                 htmlFor="waterContent"
                 className="block font-medium text-gray-700"
@@ -93,8 +152,8 @@ const DiagnosePage = () => {
                 className="mt-1 p-2 border rounded-md w-full"
                 required
               />
-            </div>
-            <div className="mb-4">
+            </div> */}
+            {/* <div className="mb-4">
               <label
                 htmlFor="vitaminAQuantity"
                 className="block font-medium text-gray-700"
@@ -111,8 +170,8 @@ const DiagnosePage = () => {
                 className="mt-1 p-2 border rounded-md w-full"
                 required
               />
-            </div>
-            <div className="mb-4">
+            </div> */}
+            {/* <div className="mb-4">
               <label
                 htmlFor="vitaminBQuantity"
                 className="block font-medium text-gray-700"
@@ -129,8 +188,8 @@ const DiagnosePage = () => {
                 className="mt-1 p-2 border rounded-md w-full"
                 required
               />
-            </div>
-            <div className="mb-4">
+            </div> */}
+            {/* <div className="mb-4">
               <label
                 htmlFor="vitaminCQuantity"
                 className="block font-medium text-gray-700"
@@ -147,11 +206,11 @@ const DiagnosePage = () => {
                 className="mt-1 p-2 border rounded-md w-full"
                 required
               />
-            </div>
+            </div> */}
           </div>
 
           <div className="flex">
-            <div className="mb-4">
+            {/* <div className="mb-4">
               <label
                 htmlFor="vitaminDQuantity"
                 className="block font-medium text-gray-700"
@@ -168,8 +227,8 @@ const DiagnosePage = () => {
                 className="mt-1 p-2 border rounded-md w-full"
                 required
               />
-            </div>
-            <div className="mb-4">
+            </div> */}
+            {/* <div className="mb-4">
               <label
                 htmlFor="alcoholContent"
                 className="block font-medium text-gray-700"
@@ -186,8 +245,8 @@ const DiagnosePage = () => {
                 className="mt-1 p-2 border rounded-md w-full"
                 required
               />
-            </div>
-            <div className="mb-4">
+            </div> */}
+            {/* <div className="mb-4">
               <label
                 htmlFor="ironContent"
                 className="block font-medium text-gray-700"
@@ -204,8 +263,8 @@ const DiagnosePage = () => {
                 className="mt-1 p-2 border rounded-md w-full"
                 required
               />
-            </div>
-            <div className="mb-4">
+            </div> */}
+            {/* <div className="mb-4">
               <label
                 htmlFor="fatContent"
                 className="block font-medium text-gray-700"
@@ -222,19 +281,41 @@ const DiagnosePage = () => {
                 className="mt-1 p-2 border rounded-md w-full"
                 required
               />
-            </div>
+            </div> */}
           </div>
-          <button
-            type="submit"
-            className="bg-[#4F86E7] text-white font-semibold py-2 px-4 rounded-full"
+          <div
+            onMouseMove={handleMouseMove}
+            className="relative inline-block"
+            style={{ position: "relative" }}
           >
-            Submit
-          </button>
+            <button
+              type="submit"
+              className="bg-[#4F86E7] text-white font-semibold py-2 px-4 rounded-full"
+            >
+              Submit
+            </button>
+          </div>
         </form>
       </div>
-      <div className="flex justify-center mt-10">
-        Based on the selected food type, the missing or very low nutrient may be
-         {result}
+      <div className="flex justify-center">
+        { loaderdiv &&
+          <div className="flex flex-col justify-center mt-10 mb-10 border-2 border-dotted border-black p-4">
+            {path === "Loading..." ? (
+              <Loader />
+            ) : (
+              <>
+                {path && (
+                  <Image
+                    src={`/${path}`}
+                    width={700}
+                    height={700}
+                    alt="Your report will be displayed here..."
+                  />
+                )}
+              </>
+            )}
+          </div>
+        }
       </div>
     </div>
   );

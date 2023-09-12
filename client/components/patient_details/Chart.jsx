@@ -5,7 +5,7 @@ const Chart = () => {
     <div className="chart_div">
       <div className="chart_header_div mt-5">
         <div className="chart_header ml-5 text-[12px] font-bold">
-          Upcoming hours
+          Session Timeline
         </div>
         <div className="chart_options">
           <div className="chart_options_ind">

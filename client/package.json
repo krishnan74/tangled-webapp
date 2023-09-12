@@ -9,15 +9,23 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.17",
+    "@rainbow-me/rainbowkit": "^1.0.11",
+    "@supabase/supabase-js": "^2.33.2",
     "autoprefixer": "10.4.15",
     "eslint": "8.49.0",
     "eslint-config-next": "13.4.19",
+    "fs": "^0.0.1-security",
     "next": "13.4.19",
     "postcss": "8.4.29",
     "react": "18.2.0",
+    "react-csv-reader": "^4.0.0",
     "react-dom": "18.2.0",
     "react-dropzone": "^14.2.3",
+    "react-unity-webgl": "^9.4.3",
     "tailwindcss": "3.3.3",
+    "viem": "^1.10.9",
+    "wagmi": "^1.4.1",
     "web3": "^4.1.1",
     "web3.storage": "^4.5.5"
   }
