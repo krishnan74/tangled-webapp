@@ -1,6 +1,8 @@
-import React from 'react'
+import React from "react";
 import Image from "next/image";
-import "../css/card.css"
+import "../css/card.css";
+import krish from "./Krish";
+import Krish from "./Krish";
 
 const Card = (props) => {
   return (
@@ -59,11 +61,13 @@ const Card = (props) => {
             >
               Try Now
             </button>
+
+      
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
 
-export default Card
+export default Card;

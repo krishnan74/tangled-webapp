@@ -1,25 +1,25 @@
 import React from 'react'
 import './prec.css'
 
-const Precipitation = () => {
+const SugarLevel = () => {
   return (
     <div className='uv_card'>
           <div className='text_div mt-4'>
-              <p className='font-semibold text-xs mr-10'>Precipitation</p>
+              <p className='font-semibold text-xs mr-10'>Sugar Level</p>
               <div id="icon_holder">
                   <img src="raincloud.png" alt="" />
               </div>
           </div>
 
           <div className='percent ml-3'>
-              <p className='font-bold text-lg text-center'>1.4 cm</p>
+              <p className='font-bold text-lg text-center'>15 mg/dl</p>
           </div>
           <div className='levels_prec mt-1 ml-5'>
               <div className='good_div_prec'>
                   <p className='text-[10px] '>0</p>
               </div>
               <div className='normal_div_prec'>
-                  <p className='text-[10px]     '>10</p>
+                  <p className='text-[10px]'>10</p>
               </div>
               <div className='bad_div_prec'>
                   <p className='text-[10px] '>20</p>
@@ -51,4 +51,4 @@ const Precipitation = () => {
   )
 }
 
-export default Precipitation
+export default SugarLevel;

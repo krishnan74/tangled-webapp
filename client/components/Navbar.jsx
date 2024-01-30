@@ -65,6 +65,15 @@ const Navbar = () => {
         >
           Retrieve
         </Link>
+
+        <Link
+          href={"/chatbot"}
+          className={`px-3 py-1 ${
+            isCurrentTab("/chatbot") ? "border-b-2 border-[#4F86E7]" : ""
+          }`}
+        >
+          ChatBot
+        </Link>
       </div>
       <div className="flex justify-end items-center">
         <WalletConnectButton />

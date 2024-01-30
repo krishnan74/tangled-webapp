@@ -11,7 +11,7 @@ const Humidity = (props) => {
           </div>
 
           <div className='percent '>
-              <p className='font-bold text-lg text-center'>82% <span className='text-[12px] font-light'>bad</span></p>
+              <p className='font-bold text-lg text-center'>{props.percentage} <span className='text-[12px] font-light'>bad</span></p>
           </div>
           <div className='levels mt-1'>
               <div className='good_div'>

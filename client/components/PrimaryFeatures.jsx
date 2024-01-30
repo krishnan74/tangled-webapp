@@ -71,11 +71,10 @@ export function PrimaryFeatures() {
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
-            Seamless patent and trademark provisioning
+            Decentralized EHR and AI
           </h2>
           <p className="mt-6 text-lg tracking-tight text-indigo-100">
-            Well everything you need if you aren’t that picky about minor
-            details like tax compliance.
+            Solutions for all of the healthcare problems at one stop
           </p>
         </div>
         <Tab.Group
